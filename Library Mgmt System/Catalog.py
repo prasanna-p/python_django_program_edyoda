@@ -19,10 +19,17 @@ class Catalog:
         book.addBookItem(isbn, rack)
         
     def searchByName(self,name):
-        pass
+        for book in self.books:
+            if name == book.name:
+                return True
+                break
     
     def searchByAuthor(self,author):
-        pass
+        for book in self.books:
+            if author == book.author:
+                return True
+                break
+
     
         
     def displayAllBooks(self):
