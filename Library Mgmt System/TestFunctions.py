@@ -1,30 +1,47 @@
 # -*- coding: utf-8 -*-
-from Book import Book
-from Catalog import Catalog
 from User import Member, Librarian
+from Catalog import Catalog
 
-b1 = Book('Shoe Dog','Phil Knight', '2015',312)
-b1.addBookItem('123hg','H1B2')
-b1.addBookItem('124hg','H1B3')
+#creating useres
+user1 = Member("prasanna","bangalore",22,"zxcc8765","std123")
+user2 = Member("prashanth","bangalore",23,"zxcc5765","std143")
 
-b1.printBook()
+#creating a librarian
+lib1 = Librarian("admin","mysore",34,"avcgh4352","emp123")
 
-catalog = Catalog()
+#adding book and book items
+book = lib1.addBook("harry potter","william",2001,500)
+lib1.addBookItem(book,"123zxc43","h101")
+lib1.addBookItem(book,"123zxc44","h102")
+lib1.addBookItem(book,"123zxc45","h103")
+lib1.addBookItem(book,"123zxc46","h104")
 
-b = catalog.addBook('Shoe Dog','Phil Knight', '2015',312)
-catalog.addBookItem(b, '123hg','H1B2')
-catalog.addBookItem(b, '124hg','H1B4')
-catalog.addBookItem(b, '125hg','H1B5')
+book = lib1.addBook("ironman","jhon",2005,300)
+lib1.addBookItem(book,"125zgc10","g101")
+lib1.addBookItem(book,"125zgc11","g102")
+lib1.addBookItem(book,"125zgc12","g103")
+lib1.addBookItem(book,"125zgc13","g104")
 
-b = catalog.addBook('Moonwalking with Einstien','J Foer', '2017',318)
-catalog.addBookItem(b, '463hg','K1B2')
+book = lib1.addBook("attitude","xyz",2016,350)
+lib1.addBookItem(book,"765zgc10","h101")
+lib1.addBookItem(book,"765zgc12","s102")
 
-catalog.displayAllBooks()
+lib1.displayBooks()#displaying the inventory
+print("\n\n")
 
-m1 = Member("Vish","Bangalore",23,'asljlkj22','std1233')
+#issuing the books
+user1.issueBook("ironman")
+user2.issueBook("attitude")
+user1.issueBook("harry potter")
+print("books inventory after issued by members")
+lib1.displayBooks()
+print("\n\n")
 
-librarian = Librarian("Awantik","Bangalore",34,'asljlkj22','zeke101') 
-print (m1)
-print (librarian)
+#returning the books
+print("books inventry after returning the books by user1 and user2")
+user1.returnBook("harry potter")
+user2.returnBook("attitude")
+lib1.displayBooks()
 
-#m1.issueBook
+
+

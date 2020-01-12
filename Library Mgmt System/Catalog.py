@@ -21,7 +21,7 @@ class Catalog:
     def searchByName(self,name):
         for book in self.books:
             if name == book.name:
-                return True
+                return book
                 break
     
     def searchByAuthor(self,author):
@@ -33,10 +33,10 @@ class Catalog:
     
         
     def displayAllBooks(self):
+        print("**************Welcome to Library Management System**************")
+
         print ('Different Book Count',self.different_book_count)
         c = 0
+        print("{}\t{}\t{}\t{}\t{}".format("Book Name","Author","Total Books","Books issued","Books Available"))
         for book in self.books:
-            c += book.total_count
             book.printBook()
-        
-        print ('Total Book Count',c)

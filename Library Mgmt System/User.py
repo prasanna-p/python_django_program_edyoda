@@ -23,38 +23,43 @@ class Member(User):
     
     #assume name is unique
     def issueBook(self,name,days=10):
-        for book in catalog.books:
-            if name == book.name:
-                for book_item in book.book_item:
-                    if book_item.status == 0:
-                        book_item.status == 1
-                        book_item.member = self
-                        book_item.duetime = days*60
-                        book_item.total_issued_time = time.time()
-                        return book_item
-                        break
-        
+        book = catalog.searchByName(name)
+        if book:
+            book.issued_count+=1
+            for book_item in book.book_item:
+                if book_item.status == 0:
+                    book_item.status == 1
+                    book_item.member = self
+                    book_item.duetime = days*60
+                    book_item.total_issued_time = time.time()
+                    return book_item
+                    break
+            else:
+                print("no book is available for today...sorry for your inconviniance")
+        else:
+            print("the name of the book you entered is wrong")
+
     
     #assume name is unique
     def returnBook(self,name):
         end = time.time()
-        for book in catalog.books:
-            if name == book.name:
-                for book_item in book.book_item:
-                    if book_item.Member == self:
-                        total_time = end - book_item.total_issued_time
-                        if book_item.duetime < int(total_time):
-                            pass
-                        book_item.status = 0
-                        book_item.member = None
-                        book_item.duetime = 0
-                        book_item.total_issued_time = 0
+        book = catalog.searchByName(name)
+        if book:
+            book.issued_count-=1
+            for book_item in book.book_item:
+                if book_item.member == self:
+                    total_time = end - book_item.total_issued_time
+                    if book_item.duetime < int(total_time):
+                        print("You have to pay penalty for crossing due date")
+                    book_item.status = 0
+                    book_item.member = None
+                    book_item.duetime = 0
+                    book_item.total_issued_time = 0
 
 
         
         
 class Librarian(User):
-    
     def __init__(self,name, location, age, aadhar_id,emp_id):
         super().__init__(name, location, age, aadhar_id)
         self.emp_id = emp_id
@@ -76,6 +81,8 @@ class Librarian(User):
                 catalog.books.remove(book)
                 return True
                 break
+    def displayBooks(self):
+        catalog.displayAllBooks()
 
     
     
