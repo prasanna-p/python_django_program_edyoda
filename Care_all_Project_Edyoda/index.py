@@ -4,6 +4,18 @@ from younger_profile import YoungerProfile
 from elder_profile import ElderProfile
 
 # welcome note and giving oprion to login or register
+def elder_info(id):
+    sql = f'select * from users,elders where PK_user_id = FK_user_id and FK_younger_id = {id}'
+    mycursor.execute(sql)
+    elder_info = mycursor.fetchall()
+    if elder_info:
+        print("\t\tCare Seekers Details:")
+        print("\t\t{:25}".format("name:"))
+        for elder in elder_info:
+            print("\t\t\t{:25}".format(elder[1]))
+    else:
+        print("\t\tcurrently no care seekers")
+
 def welcome():
     print("Please select\n1. Login as Elder \n2. Login as Younger\n3. Register\n4. View all youngers who are taking care\n5. View who is taking care of older couple\n6. Exit")
     task = int(input())
@@ -51,6 +63,8 @@ def welcome():
         print("{:25} {:25} {:15} {:5}".format("name","Email","Contact","Rating"))
         for younger in younger_info:
             print("{:25} {:25} {:15} {}".format(younger[1],younger[2],younger[4],younger[7]))
+            elder_info(younger[0])
+            print("\n")
         print("\n\n")
         welcome()
 
