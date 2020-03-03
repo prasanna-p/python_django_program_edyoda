@@ -1,0 +1,328 @@
+@import "https://fonts.googleapis.com/css?family=Raleway:500";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.topbar{
+    width: 100%;
+    height: auto;
+    z-index: 90;
+    padding:1em 4.875em;
+    background-color: #fff;  
+    display:flex;
+    box-shadow:0 1px 1px #ccc;
+    position:fixed;
+    padding-top:0;
+
+}
+.topbar_sections{
+    display:inline-block;
+    margin-right:70px;
+}
+
+.section2{
+    margin-bottom: 10px;
+}
+
+.topbar_edyoda{
+    width:130px;
+    margin-bottom: 0px;
+    font-family: Raleway,sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -.9px;
+    text-align: left;
+    text-shadow: blue;
+    display:inline-block;
+}
+.topbar_edyoda_1{
+    background-image: linear-gradient(269deg,#0048ff,#0096ff),linear-gradient(#000,#000);
+    color: #0084ff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo_stories{
+    margin: 0;
+    object-fit: contain;
+    font-family: Raleway,sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    line-height:.8;
+    font-style: italic;
+    color: #000;
+}
+.topbar_sections_cat_wrapper{
+    display: flex;
+}
+
+.topbar_sections_cat{
+    padding-right: 8px;
+}
+
+.cat_icon{
+    margin-top: 4px;
+}
+
+.web_page_body{
+    background-color: #f2f6ff;
+    padding-bottom: 4%;
+}
+
+.web_page_body2{
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.post_bar{
+    padding-top:100px;
+}
+
+.post_hedding{
+    width:-webkit-fit-content;
+ width:-moz-fit-content;
+ width:fit-content;
+ margin:0;
+ font-family:Raleway,sans-serif;
+ font-size:24px;
+ font-weight:600;
+ font-style:normal;
+ font-stretch:normal;
+ line-height:1.25;
+ letter-spacing:-.6px;
+ text-align:left;
+ color:#000
+}
+.filter_sec{
+    display: flex;
+    margin-top: 2.5%;
+    flex-direction: row;
+}
+.filter_sec_icon{
+    color:#5804f4;
+    margin-right: 10px;
+}
+.filter_content{
+    margin-top: 0;
+}
+.buttons{
+    font-family: Raleway,sans-serif;
+    display: inline-block;
+    border: 1px solid #0084ff;
+    padding: 6px 16px;
+    background-color: transparent;
+    color: #0084ff;
+    border-radius: 15px;
+    width: auto;
+    font-size: .75em;
+    margin:5px;
+}
+.blog_card_container{
+    width:30%;
+    border:1px solid rgba(0,168,255,.3);
+    border-radius: 5px;
+    margin: 8px;
+    display: inline-block;
+}
+
+.blog_cards_link{
+    text-decoration: none;
+    color: unset;
+}
+
+.blog_card_container_image_section{
+    width: 100%;
+}
+
+.image_card{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.blog_card_container_description{
+    background-color: #fff; 
+    padding:.7em 1.5em;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+}
+.blog_card_hedding{
+    font-family: Raleway,sans-serif;
+    font-size:1.3em;
+    font-weight:600;
+    font-style:normal;
+    line-height:1.14;
+    color:#000;
+    margin-bottom: 0;
+}
+
+.blog_card_author_name{
+    font-size: .9em;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 2;
+    color:#0096ff;
+    margin-top: 1;
+    text-align: left;
+    font-family: Raleway,sans-serif;
+}
+
+.blogcard_publish_date{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    color: #000;
+    margin-top: .3em;
+    font-family: Roboto;
+}
+
+.blog_card_description_div{
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: .5px;
+    text-align: left;
+    color: rgba(0,0,0,.7);
+}
+.footer_div{
+    padding: 40px 16%;
+    background-color:  #172146;
+
+}
+.top_spacing{
+    padding-top: 100px;
+}
+
+.card_details{
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 24%;
+    widows: 100%;
+    border: 1px solid rgba(0,168,255,.3);
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,.1);
+    border-radius: 5px;
+    position: relative;
+    background-color: #fff;;
+}
+.Main_image_card{
+    width:100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card_hedding_details{
+    padding:1em 6em;
+    padding-bottom: 0;
+}
+
+.card_heading{
+    margin:0;
+    font-family:Raleway,sans-serif;
+    font-size:1.8em;
+    font-weight:600;
+    font-style:normal;
+    font-stretch:normal;
+    line-height:1;
+    letter-spacing:-1px;
+    text-align:left;
+    color:#000
+}
+.card_author_date{
+    position: relative;
+    height: 2.5em;
+    padding: .4em 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.blog_card_author_name{
+    font-family: Raleway,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+    color:#0096ff;
+}
+.blogcard_publish_date{
+    font-weight: 300;
+    color:#000;
+    font-family: Roboto,sans-serif;
+    font-size: 14px;;
+}
+
+.blog_description{
+    padding:1em 6em;
+}
+
+.para_class{
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: .2px;
+    font-family: Raleway,sans-serif;
+}
+
+.devider{
+    width: 100%;
+    margin-bottom:0;
+}
+
+.blog_A_sec{
+    display: flex;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.blog_author_image{
+    width:200px;
+    height: 200px;
+}
+.blog_author_image_card{
+    width:100%;
+}
+
+.blog_author_details{
+    margin-left: 10%;
+}
+.blog_author_name{
+    padding-top:35;
+    font-family: Raleway,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color:#0096ff;
+    margin:2;
+    padding-bottom: 10;
+    }
+.blog_author_description{
+    font-family: Raleway,sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-align: left;
+    color:#000;
+    margin: .3em 0 0;
+}
+.blog_button{
+    padding:35px;
+    margin-left: 8%;
+    margin-bottom: 5%;
+    margin-top: -12%;
+    margin-right: 15%;
+    width:400px;
+}
+.button{
+    font-family: Raleway,sans-serif;
+    display: inline-block;
+    border: 1px solid #0084ff;
+    padding: 6px 16px;
+    background-color: transparent;
+    color: #0084ff;
+    border-radius: 15px;
+    width: auto;
+    font-size: .85em;
+    margin:5px;
+}
